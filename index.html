@@ -1,0 +1,21 @@
+<html>
+<head>
+<title>Embedded Chat Demo</title>
+<script>
+!function(e,n,t,r){function s(){try{var e;if((e="string"==typeof this.response?JSON.parse(this.response):this.response).url){var t=n.getElementsByTagName("script")[0],r=n.createElement("script");r.async=!0,r.src=e.url,t.parentNode.insertBefore(r,t)}}catch(e){}}var o,i,p,a=[],c=[];e[t]={init:function(){o=arguments;var e={then:function(n){return c.push({type:"t",next:n}),e},catch:function(n){return c.push({type:"c",next:n}),e}};return e},on:function(){a.push(arguments)},render:function(){i=arguments},destroy:function(){p=arguments}},e.__onWebMessengerHostReady__=function(n){if(delete e.__onWebMessengerHostReady__,e[t]=n,o)for(var r=n.init.apply(n,o),s=0;s<c.length;s++){var u=c[s];r="t"===u.type?r.then(u.next):r.catch(u.next)}i&&n.render.apply(n,i),p&&n.destroy.apply(n,p);for(s=0;s<a.length;s++)n.on.apply(n,a[s])};var u=new XMLHttpRequest;u.addEventListener("load",s),u.open("GET","https://cdn.zingle.me/web-chat/loader.json",!0),u.responseType="json",u.send()}(window,document,"Zingle");
+</script>
+</head>
+<body>
+  <div style="text-align: center">
+    <div style="margin: 0 auto 0 auto; width: 600px; height: 600px;" id="embed-container">
+    
+    </div>
+   </div>
+   <script>
+    Zingle.init({appId: '5a7e0ddbb6e9020022cf24f8', embedded: true}).then(function() {
+       console.log('chat rendered');
+    });   
+    Zingle.render( document.getElementById('embed-container') );
+   </script>
+</body>
+</html>

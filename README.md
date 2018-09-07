@@ -206,7 +206,7 @@ Zingle.sendMessage('hello');
 ```
 
 #### updateUser(user)
-Updates user information
+Updates user information. The 'properties' object specified contact field properties that should be updated.  Use the Contact Field name as the property name. 
 
 ```javascript
 Zingle.updateUser({
@@ -214,7 +214,7 @@ Zingle.updateUser({
     surname: 'Name',
     email: 'updated@email.com',
     properties: {
-      'justGotUpdated': true
+      'Room Number': 202
     }
 });
 ```

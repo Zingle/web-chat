@@ -213,6 +213,8 @@ Zingle.updateUser({
     givenName: 'Updated',
     surname: 'Name',
     email: 'updated@email.com',
+    phone: '+18585551212',
+    externalId: '954TRB',
     properties: {
       'Room Number': 202
     }

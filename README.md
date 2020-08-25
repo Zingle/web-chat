@@ -81,7 +81,8 @@ var skPromise = Zingle.init({
         conversationTimestampHeaderFormat: 'MMMM D YYYY, h:mm A',
         fetchHistory: 'Load more',
         fetchingHistory: 'Retrieving history...',
-        frontendEmailChannelDescription: 'To talk to us using email just send a message to our email address and we\'ll reply shortly:',
+        frontend
+        ChannelDescription: 'To talk to us using email just send a message to our email address and we\'ll reply shortly:',
         headerText: 'How can we help?',
         inputPlaceholder: 'Type a message...',
         introAppText: 'Message us below or from your favorite app.',
@@ -213,9 +214,9 @@ Zingle.updateUser({
     givenName: 'Updated',
     surname: 'Name',
     email: 'updated@email.com',
-    phone: '+18585551212',
     externalId: '954TRB',
     properties: {
+      phone: '+18585551212',
       'Room Number': 202
     }
 });
